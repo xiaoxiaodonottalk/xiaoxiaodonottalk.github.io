@@ -1,15 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
+@import "reset.css";
+img {
+  width: 100%;
+  height: 100%;
 }
-html,body
-{
-    width: 100%;
-    height: 100%;
+li {
+  list-style: none;
 }
-#main{
-    height: 100%;
-    background-image: url("../img/background-img01.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+#all {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  /*自定义滚动条*/
+}
+#all #imgleft {
+  width: 900px;
+  height: 100%;
+  margin-right: 10px;
+}
+#all #imgright #imgright-top,
+#all #imgright #imgright-buttom {
+  position: absolute;
+  display: inline;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(18, 18, 0, 0.7);
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0;
+  transition: opacity 3s;
+  z-index: 2;
+}
+#all #imgright #imgright-buttom {
+  bottom: -10px;
+}
+#all #imgright #imgright-top {
+  top: 10px;
+}
+#all #imgright ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transition: all 0.8s linear; */
+}
+#all #imgright ul li {
+  height: 200px;
+  z-index: 1;
+}
+#all #imgright ul li img {
+  width: 300px;
+  height: 100%;
+}
+#all #imgright {
+  position: relative;
+  width: 300px;
+  min-height: 600px;
+  overflow: hidden;
+}
+#all .scroll {
+  position: relative;
+  height: 600px;
+  width: 18px;
+  background-color: aqua;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+#all .scroll .scrollIn {
+  position: absolute;
+  top: 0;
+  width: 16px;
+  background-color: coral;
 }
